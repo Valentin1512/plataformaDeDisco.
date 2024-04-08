@@ -1,0 +1,43 @@
+.sidebar {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #e908d6;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+body{
+    background-image: url(https://assets.dev-filo.dift.io/img/2022/10/28/lit_killah_disco_nuevo_re.jpg);
+    background-size: 100%;
+}

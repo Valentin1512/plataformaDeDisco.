@@ -1,0 +1,56 @@
+#titulo3{
+    font-size: 50px;
+    color: rgb(255, 0, 212);
+    margin-left: 130px;
+    background-color: black;
+    border-radius:60px ;
+    padding-left: 60px;
+}
+
+.usuario{
+    font-size: 30px;
+    color: rgb(255, 0, 157);
+    background-color: black;
+}
+
+.Nombre{
+    font-size: 50px;
+    color: white;
+    
+}
+
+strong{
+    color: rgb(255, 126, 238);
+}
+
+body{
+    background-image: url(https://styles.redditmedia.com/t5_4lcid9/styles/communityIcon_0q602i601v471.png);
+    
+}
+
+#contenedor{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#item{
+    background-color: blueviolet;
+    border-radius:60px;
+    padding-left: 60px;
+    margin-top: 60px;
+}
+
+.submit{
+    font-size: 30px;
+    color: rgb(255, 0, 157);
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.Iniciosesion{
+    display: flex;
+    justify-content: end;
+    
+}
