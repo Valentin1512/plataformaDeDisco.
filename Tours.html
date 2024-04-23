@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tours</title>
     <link rel="stylesheet" href="style/tours.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="JavaScript/tours.js"></script>
 </head>
-<body>
+<body class="flex flex-col items-center justify-center h-screen ">
+
     <div class="sidebar ">
         <img class="rounded-full size-28" src="https://i.scdn.co/image/1281223dd3e5d4b035dc2ca8775a4cfa91e20508" alt="">
         <h2 class="mt-2 text-black text-4xl">Valentin Viollaz</h2>
@@ -22,39 +24,40 @@
             <li class="text-3xl mt-3.5"><a href="signUp.html">Log out</a></li>
         </ul>
     </div>
-    <div class="flex justify-center text-4xl text-white ">Tour y fechas</div>
+    <span id="welcome"></span>
+    <div class="text-pink-400 text-5xl font-bold mb-6 text-center flex justify-center">Tour & Fechas</div>
+    
+        <div class="w-full max-w-screen-md">
+            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4">
+                <div class="tour-date font-bold">April 30, 2024</div>
+                <div class="tour-details text-white">Buenos Aires,Argentina</div>
+                <a href="#" class="btn bg-gray-400 text-white font-bold py-2 px-4 rounded inline-block mt-2">Sold Out</a>
+            </div>
+        
+            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4">
+                <div class="tour-date font-bold">May 15, 2024</div>
+                <div class="tour-details text-white">Bogota,Colombia</div>
+                <a href="#" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-2">Tickets</a>
+            </div>
+        
+            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4">
+                <div class="tour-date font-bold">June 1, 2024</div>
+                <div class="tour-details text-white">New York,Estados Unidos</div>
+                <a href="#" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-2">Tickets</a>
+            </div>
 
-    <div class=" bg-fuchsia-900 text-2xl text-white mt-8 pt-1.5">
-        <div class="flex justify-evenly">
-        <div>Enero,9</div>
-        <div>Buenos Aires,Argentina</div>
-        <div class="bg-gray-500 border-inherit border-solid border-2 ">Sold out</div>
-       </div>
-       <div class="flex justify-evenly">
-        <div>Febrero,10</div>
-        <div>Madrid,España</div>
-        <div class="bg-gray-500 border-inherit border-solid border-2 ">Ticket</div>
-       </div>
-       <div class="flex justify-evenly content-center">
-        <div>Marzo,25</div>
-        <div>New york,Estados Unidos</div>
-        <div class="bg-gray-500 border-inherit border-solid border-2 ">Ticket</div>
-       </div>
-       <div class="flex justify-evenly content-center">
-        <div>Abril,15</div>
-        <div>Bogota,Colombia</div>
-        <div class="bg-gray-500 border-inherit border-solid border-2 ">Ticket</div>
-       </div>
-       <div class="flex justify-evenly content-center">
-        <div>Marzo,31</div>
-        <div>Rio de Janeiro,Brasil</div>
-        <div class="bg-gray-500 border-inherit border-solid border-2 ">Ticket</div>
-       </div>
-       <div class="flex justify-evenly content-center">
-        <div>Junio,5</div>
-        <div>Montevideo,Uruguay</div>
-        <div class="bg-gray-500 border-inherit border-solid border-2 ">Ticket</div>
-       </div>
-    </div>
+            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4">
+                <div class="tour-date font-bold">January 15, 2024</div>
+                <div class="tour-details text-white">Sntiago del Estero,Chile</div>
+                <a href="#" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-2">Tickets</a>
+            </div>
+
+            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4">
+                <div class="tour-date font-bold">December 5, 2024</div>
+                <div class="tour-details text-white">Rio De Janeiro,Brasil</div>
+                <a href="#" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-2">Tickets</a>
+            </div>
+        </div>
 </body>
 </html>
+

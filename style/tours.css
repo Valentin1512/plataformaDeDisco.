@@ -33,12 +33,14 @@
 }
 
 
-.content {
-    margin-left: 250px;
-    padding: 20px;
-}
+
 
 body{
     background-image: url(https://d34ugyblrhxy34.cloudfront.net/wp-content/uploads/2019/11/05235745/LIT-KILLAH-BIG-SOTO-SAMURAI.png);
     background-size: 100%;
+}
+
+img{
+    width: 100px;
+    height: 100px;
 }
