@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style/tours.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="JavaScript/tours.js"></script>
+    
 </head>
-<body class="flex flex-col items-center justify-center h-screen ">
+<body>
 
     <div class="sidebar ">
         <img class="rounded-full size-28" src="https://i.scdn.co/image/1281223dd3e5d4b035dc2ca8775a4cfa91e20508" alt="">
@@ -25,10 +25,129 @@
         </ul>
     </div>
     <span id="welcome"></span>
-    <div class="text-pink-400 text-5xl font-bold mb-6 text-center flex justify-center">Tour & Fechas</div>
     
-        <div class="w-full max-w-screen-md">
-            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4">
+
+
+    <h1 class="text-5xl font-bold mb-4 flex justify-center font-serif text-purple-600">Fechas y Tours</h1>
+    <div class="container mx-auto px-4 py-8 flex justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Tour 1 -->
+            <div class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold mb-2">Buenos Aires,Argentina</h2>
+                <p class="text-gray-600 mb-2">Fecha: 15 de Mayo, 2024</p>
+                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                        Tickets
+                    </button>
+                    <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded cursor-not-allowed" disabled>
+                        Sold Out
+                    </button>
+                </div>
+            </div>
+            <!-- Tour 2 -->
+            <div class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold mb-2">Montevideo,Uruguay</h2>
+                <p class="text-gray-600 mb-2">Fecha: 20 de Mayo, 2024</p>
+                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                        Tickets
+                    </button>
+                    <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded cursor-not-allowed" disabled>
+                        Sold Out
+                    </button>
+                </div>
+            </div>
+            <!-- Tour 3 -->
+            <div class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold mb-2">Sntiago del Estero,Chile</h2>
+                <p class="text-gray-600 mb-2">Fecha: 25 de Mayo, 2024</p>
+                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                        Tickets
+                    </button>
+                    <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded cursor-not-allowed" disabled>
+                        Sold Out
+                    </button>
+                </div>
+            </div>
+            <!-- Tour 4 -->
+            <div class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold mb-2">New York,Estados Unidos</h2>
+                <p class="text-gray-600 mb-2">Fecha: 30 de Mayo, 2024</p>
+                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                        Tickets
+                    </button>
+                    <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="text-pink-400 text-5xl font-bold mb-6 text-center flex justify-center">Tour & Fechas</div>
+    
+        <div class="w-full  flex flex-col items-center justify-center space-y-4  ">
+            <div class="tour-container bg-purple-700 p-6 rounded-lg shadow-md text-center mb-4 ">
                 <div class="tour-date font-bold">April 30, 2024</div>
                 <div class="tour-details text-white">Buenos Aires,Argentina</div>
                 <a href="#" class="btn bg-gray-400 text-white font-bold py-2 px-4 rounded inline-block mt-2">Sold Out</a>
@@ -57,7 +176,8 @@
                 <div class="tour-details text-white">Rio De Janeiro,Brasil</div>
                 <a href="#" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mt-2">Tickets</a>
             </div>
-        </div>
+        </div> -->
+        <script src="JavaScript/tours.js"></script>
 </body>
 </html>
 

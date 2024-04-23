@@ -7,16 +7,16 @@ alert("Hola " + nombre + " de " + edad + " años " + " te interesaría adquirir 
 
 // DOM en la parte de tours
 
-let nombre = prompt("Cuál es tu nombre?");
+/*let nombre = prompt("Cuál es tu nombre?");
 const span = document.querySelector("#welcome");
 
 if (nombre.length < 2) {
   nombre = prompt("Demasiado corto, dinos, cuál es realmente tu nombre?");
 }
-span.textContent = "Hola, " + nombre;
+span.textContent = "Hola, " + nombre; */
 
 
-/*
+
 let nombre = prompt("Cuál es tu nombre?").toUpperCase();
 while (nombre.length < 3) {
   nombre = prompt(
@@ -26,4 +26,4 @@ while (nombre.length < 3) {
 const span = document.getElementById("welcome");
 span.textContent = `Hola, ${nombre}`;
 const i = document.querySelector("i");
-i.setAttribute("class", "fa fa-ticket"); */
+i.setAttribute("class", "fa fa-ticket"); 

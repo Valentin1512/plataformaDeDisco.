@@ -44,3 +44,10 @@ img{
     width: 100px;
     height: 100px;
 }
+
+#welcome{
+    display: flex;
+    justify-content: flex-end;
+    size: 50px;
+    color: white;
+}
