@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*let nombreUsuario = prompt("Cual es tu nombre?")
 let edad = parseInt(prompt("Cual es tu edad?"))
 
@@ -27,3 +28,9 @@ const span = document.getElementById("welcome");
 span.textContent = `Hola, ${nombre}`;
 const i = document.querySelector("i");
 i.setAttribute("class", "fa fa-ticket"); 
+=======
+let nombre = prompt("Cual es tu nombre?")
+let edad = parseInt(prompt("Cual es tu edad?"))
+
+alert("Hola " + nombre + " de " + edad + " años " + " te interesaría adquirir tickects ? 🎟️'")
+>>>>>>> 26f21dee7c1b8d51aafdc5440a8cb87b8adc1b83
