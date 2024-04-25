@@ -45,9 +45,14 @@ img{
     height: 100px;
 }
 
-#welcome{
+#ticket{
     display: flex;
     justify-content: flex-end;
     size: 50px;
     color: white;
+}
+
+i{
+ padding-top: 10px;
+ padding-right: 5px;
 }

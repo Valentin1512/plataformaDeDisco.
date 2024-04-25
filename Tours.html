@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="style/tours.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/77899d179b.js" crossorigin="anonymous"></script>
 </head>
-<script src="JavaScript/tours.js"></script>
 <body>
 
     <div class="sidebar ">
@@ -25,7 +24,10 @@
             <li class="text-3xl mt-3.5"><a href="signUp.html">Log out</a></li>
         </ul>
     </div>
+    <div id="ticket">
+    <i class="fa-solid fa-ticket fa-lg" style="color: #ff0000;"></i>
     <span id="welcome"></span>
+    </div>
     
 
 
@@ -36,60 +38,70 @@
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">Buenos Aires,Argentina</h2>
                 <p class="text-gray-600 mb-2">Fecha: 15 de Mayo, 2024</p>
-                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                    <button  onclick="getTickets(BuenosAires,noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
                         Tickets
                     </button>
-                    <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded cursor-not-allowed" disabled>
-                        Sold Out
-                    </button>
+                    
                 </div>
             </div>
             <!-- Tour 2 -->
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">Montevideo,Uruguay</h2>
                 <p class="text-gray-600 mb-2">Fecha: 20 de Mayo, 2024</p>
-                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                    <button onclick="getTickets(Montevideo, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
                         Tickets
                     </button>
-                    <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded cursor-not-allowed" disabled>
-                        Sold Out
-                    </button>
+                    
                 </div>
             </div>
             <!-- Tour 3 -->
             <div class="bg-white p-4 shadow rounded">
-                <h2 class="text-xl font-semibold mb-2">Sntiago del Estero,Chile</h2>
+                <h2 class="text-xl font-semibold mb-2">Bogota,Colombia</h2>
                 <p class="text-gray-600 mb-2">Fecha: 25 de Mayo, 2024</p>
-                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                    <button onclick="getTickets2(Bogota, noTickets) " class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton ">
                         Tickets
                     </button>
-                    <button class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded cursor-not-allowed" disabled>
-                        Sold Out
-                    </button>
+                    
                 </div>
             </div>
             <!-- Tour 4 -->
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">New York,Estados Unidos</h2>
                 <p class="text-gray-600 mb-2">Fecha: 30 de Mayo, 2024</p>
-                <p class="text-gray-600">Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iste?</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                    <button onclick="getTickets2(NewYork, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
                         Tickets
                     </button>
-                    <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-                        Buy Now
+                   
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold mb-2">Madrid,España</h2>
+                <p class="text-gray-600 mb-2">Fecha: 15 de octubre, 2024</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button onclick="getTickets(madrid, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
+                        Tickets
                     </button>
+                   
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold mb-2">La paz,Bolivia</h2>
+                <p class="text-gray-600 mb-2">Fecha: 3 de octubre, 2024</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button onclick="getTickets2(laPaz, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
+                        Tickets
+                    </button>
+                   
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="JavaScript/tours.js"></script>
 </body>
 </html>
 
