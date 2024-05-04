@@ -39,7 +39,7 @@
 }
 
 body{
-    background-image: url(https://i.ytimg.com/vi/gc5UcOJv-EA/maxresdefault.jpg);
+    background-image: url(https://cdn.eldestapeweb.com/eldestape/122022/1670529554190.jpg);
     background-size: 100%;
 }
 
@@ -64,4 +64,20 @@ body{
   
   .input:focus {
     box-shadow: 0 0 0 .15vw rgb(195, 135, 235);
+  }
+
+  #boton1{
+    background-color: blue;
+    border: none;
+    display: block;
+    width: 10%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  p{
+    font-size: 15px;
   }

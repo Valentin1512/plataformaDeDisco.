@@ -1,100 +1,157 @@
-body{
-    background-image: url(https://img.tapimg.net/market/images/d490bc33f044d20145f753bf1bba7703.png?imageView2/0/w/720/h/405/q/80/format/jpg/interlace/1/ignore-error/1);
-    background-size: 100%;
+:root{
+  --colorTextos: #e65ae6
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
-    background-color: #ff09ad;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
-    margin-top: 300px;
-    width: 500px;
-    margin-left: 500px;
-    
+.warnings{
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+  color: #d42692;
+}
+
+
+*,
+::before,
+::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+
+body{
+  font-family: 'Roboto';
+  background: #800080;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 650px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-weight: 700;
+}
+
+form{
+  background: white;
+  padding: 40px 0;
+  box-shadow: 0 0 6px rgba(255,255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.form{
+  width: 100%;
+  margin: auto;
+}
+
+form .grupo{
+position: relative;
+margin: 45px;
+
+}
+
+input{
+  background: none;
+  color: #e206ff;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus{
+  outline: none;
+  color: #e014e0;
+}
+
+label{
+ color: var(--colorTextos);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+  top: -14px;
+  font-size: 12px;
+  color: #ff00ff;
+}
+
+.barra{
+position: relative;
+display: block;
+width: 100%;
+
+}
+
+input:focus~.barra:before{
+  width: 100%;
+
+}
+
+.barra::before{
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #ffc0cb, #800080);
+  transition: 0.3s ease width;
+  left: 0;
+}
+
+button{
+  font-family: 'Roboto';
+  background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc0cb, #800080);
+  border: none;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:500px) {
+  form{
+      width: 80%
   }
   
-  .form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
-  }
-  
-  #heading {
-    text-align: center;
-    margin: 2em;
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
-  }
-  
-  .field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-  }
-  
-  .input-icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: white;
-  }
-  
-  .input-field {
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: #d3d3d3;
-  }
-  
-  .form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 2.5em;
-  }
-  
-  .button1 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: rgb(255, 255, 255);
-  }
-  
-  .button1:hover {
-    background-color: black;
-    color: rgb(255, 3, 242);
-  }
-  
-  .button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #ff09ad;
-    color: rgb(255, 255, 255);
-  }
-  
-  
-  
+}
+
+a{
+  font-family: 'Roboto';
+  background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc0cb, #800080);
+  border: none;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none
+}
+
+p{
+  text-align: center;
+  color: rgb(142, 16, 146);
+  padding-top: 15px;
+ 
+}

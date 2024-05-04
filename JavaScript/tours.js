@@ -1,54 +1,52 @@
 
-/*let nombreUsuario = prompt("Cual es tu nombre?")
-let edad = parseInt(prompt("Cual es tu edad?"))
 
-alert("Hola " + nombre + " de " + edad + " años " + " te interesaría adquirir tickects ? 🎟️'")
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
 
-//DECLARAR VARIABLES DE CIUDADES
-let BuenosAires = "El show de Buenos Aires"
-let Bogota = "El show de Bogota"
-let Montevideo = "El show de Montevideo"
-let NewYork = "El show de New York"
-let laPaz = "El show de la Paz"
-let madrid = "El show de madrid"
+//OBJETO tickets
+
+let tickets = {
+  "Buenos Aires": 2,
+  "Madrid": 2,
+  "Bogota": 2,
+  "Montevideo": 3,
+  "New York": 2,
+  "La paz": 2,
+}
+
 
 //FUNCIONES
 
 function saludar(){
-  swal("Bienvenido al apartado de tickets!!", nombre, "success");
+  swal("Bienvenido al apartado de Fechas y Tours!!", nombre, "success");
 }
 
-let noTickets;
-
-function getTickets(place, noTickets) {
-   noTickets = false
-  if (noTickets) {
-    swal(
-      "Oh no!",
-      "¡Se te acabó la suerte!, no quedan más entradas para " + 
-      place, "info",
-    );
-  } else {
-    swal("Sold!", "Tienes entradas para el " + place + 
-    " concert", "success");
+function getTickets(ciudad) {
+  while (tickets[ciudad] > 0) {
+    swal("Comprado!", "Tienes 1 entrada para el concierto de " + ciudad + 
+    " ", "success");
+    tickets[ciudad]--;  
+    disableSoldOutButtons()
+    return; 
+   }
+   swal(
+    "SOLD OUT!",
+    "¡Se te acabó la suerte!, no quedan más entradas para el concierto de " + 
+    ciudad, "info",)
   }
- }
+    
 
- function getTickets2(place, noTickets) {
-   noTickets = true
-  if (noTickets) {
-    swal(
-      "Oh no!",
-      "¡Se te acabó la suerte!, no quedan más entradas para " + 
-      place, "info",
-    );
-  } else {
-    swal("Sold!", "Tienes entradas para el " + place + 
-    " concert", "success");
-  }
- }
+
+
+ function disableSoldOutButtons(){
+  for (let ciudad in tickets) {
+    if (tickets[ciudad] === 0) {
+        let boton = document.getElementById(ciudad.replace(/\s+/g, ''));
+        if (boton) {
+            boton.textContent = "SOLD OUT";
+            boton.style.backgroundColor= "grey"
+        }
+    }
+}
+}
 
  function edadUsuario(){
   let edad = parseInt(prompt("Ingrese su edad"))
@@ -58,7 +56,7 @@ function getTickets(place, noTickets) {
     for (let i = 0; i < todosLosBotones.length; i++) {
       todosLosBotones[i].style.backgroundColor= "red"
       todosLosBotones[i].disabled = true
-      todosLosBotones[i].textContent = "no tickets"
+      todosLosBotones[i].textContent = "Bloqueado"
       }
     
   }else{
@@ -87,6 +85,7 @@ i.setAttribute("class", "fa-ticket fa-solid fa-ticket fa-lg ");
 
 edadUsuario()
 
+///////////////////////////////////////////////////////////////////
 
 
 
@@ -100,10 +99,36 @@ edadUsuario()
 
 
 
-/*let nombre = prompt("Cuál es tu nombre?");
-const span = document.querySelector("#welcome");
 
-if (nombre.length < 2) {
-  nombre = prompt("Demasiado corto, dinos, cuál es realmente tu nombre?");
-}
-span.textContent = "Hola, " + nombre; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<button id="boton" data-tickets="2">Comprar Tickets </button>
+let boton = document.getElementById("boton");
+boton.addEventListener("click", function(){ 
+   //lo que quiera aca adentro
+});
+
+*/
+
+
+

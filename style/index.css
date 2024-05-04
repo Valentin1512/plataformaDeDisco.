@@ -45,3 +45,21 @@ body{
     margin-left: 250px;
     padding: 20px;
 }
+
+.album_container{
+    position:fixed;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.favorite-icon {
+    position: relative;
+    color: grey; /* Color inicial del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    margin-right: 5px;
+}
+
+.favorite-icon.clicked {
+    color: rgb(251, 255, 0); /* Color del ícono al hacer clic */
+}
+

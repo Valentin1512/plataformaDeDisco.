@@ -6,94 +6,32 @@
     <title>SingUP</title>
    <link rel="stylesheet" href="style/signUp.css">
    <link rel="icon" href="favicon.ico">
-   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="flex justify-center">
-      <h3 class="text-pink-500 text-6xl " >REGISTRO</h3>
-    </div>
-    <div id="contenedor">
-      <div id="item">
-        <div class="flex ">
-        <form action="index.html">
-          <label class="Nombre"
-            ><strong>Nombre</strong>
-            <input name="Nombre_real" required class="usuario" type="text" />
-          </label>
-          <br /><br />
-          <label class="Nombre"
-            ><strong>Apellido</strong>
-            <input class="usuario" required type="text" />
-          </label>
-          <br />
-          <br />
-          <label class="Nombre"
-            ><strong>Fecha de nacimiento</strong>
-            <input
-              class="usuario"
-              name="fechaDeNacimiento_usuario"
-              required
-              type="date"
-            />
-          </label>
-          <br />
-          <br />
-          <label class="Nombre"
-            ><strong>Nombre de usuario</strong>
-            <input class="usuario" name="Nombre_usuario" required type="text" />
-          </label>
-          <br />
-          <br />
-          <label class="Nombre"
-            ><strong>Contraseña</strong>
-            <input
-              required
-              name="Contraseña_usuario"
-              class="usuario"
-              type="password"
-            />
-          </label>
-          <br />
-          <br />
-          <label class="Nombre"
-            ><strong>Correo electronico</strong>
-            <input required type="email" name="email_usuario" class="usuario" />
-          </label>
-          <label class="Nombre">
-            <br />
-            <br /><strong>Genero</strong> <br />
-            <input value="Mujer" name="Genero_usuario" required type="radio" />
-            <label>Femenino</label> <br />
-            <input
-              value="Hombre"
-              name="Genero_usuario"
-              required
-              type="radio"
-            /><label>Masculino</label> <br />
-          </label>
-          <br />
-          <br />
-          <label class="Nombre"
-            ><strong>Acepto las bases y condiciones</strong>
-            <input
-              value="acepta"
-              name="bases\_y\_condiciones"
-              required
-              type="checkbox"
-            />
-          </label>
-          <br />
-          <br />
-          <br />
-          <label>
-            <input class="submit" type="submit" value="Registrar usuario" />
-          </label>
-          <label>
-            <input type="button"><a class="text-3xl ms-48 bg-slate-950 text-pink-500" href="login.html">Iniciar sesion</a>
-          </label>
-        </form>
-        </div>
+    <form id="form" action="index.html">
+      <div class="form">
+      <h1>Registro</h1>
+      <div class="grupo">
+        <input required id="name" type="text"><span class="barra"></span>
+        <label for="">Nombre</label>
       </div>
+      <div class="grupo">
+        <input required id="name" type="text"><span class="barra"></span>
+        <label for="">Apellido</label>
+      </div>
+      <div class="grupo">
+        <input required id="name" type="email"><span class="barra"></span>
+        <label for="">Correo electronico</label>
+      </div>
+      <div class="grupo">
+        <input required id="name" type="password"><span class="barra"></span>
+        <label for="">Contraseña</label>
+      </div>
+      <button type="submit">Registrar</button>
+      <P>Ya tienes una cuenta?</P>
+      <a href="login.html">Inicia sesion</a>
     </div>
+    </form>
   </body>
 </html>

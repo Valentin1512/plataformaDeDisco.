@@ -34,67 +34,51 @@
     <h1 class="text-5xl font-bold mb-4 flex justify-center font-serif text-purple-600">Fechas y Tours</h1>
     <div class="container mx-auto px-4 py-8 flex justify-center">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Tour 1 -->
+         
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">Buenos Aires,Argentina</h2>
                 <p class="text-gray-600 mb-2">Fecha: 15 de Mayo, 2024</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button  onclick="getTickets(BuenosAires,noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
-                        Tickets
-                    </button>
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded boton" id="BuenosAires" onclick="getTickets('Buenos Aires')">Comprar Ticket </button>
                     
                 </div>
             </div>
-            <!-- Tour 2 -->
+          
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">Montevideo,Uruguay</h2>
                 <p class="text-gray-600 mb-2">Fecha: 20 de Mayo, 2024</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button onclick="getTickets(Montevideo, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
-                        Tickets
-                    </button>
-                    
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded boton" id="Montevideo" onclick="getTickets('Montevideo')">Comprar Ticket </button>
                 </div>
             </div>
-            <!-- Tour 3 -->
+           
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">Bogota,Colombia</h2>
                 <p class="text-gray-600 mb-2">Fecha: 25 de Mayo, 2024</p>
-                <div class="mt-4 flex justify-between items-center">
-                    <button onclick="getTickets2(Bogota, noTickets) " class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton ">
-                        Tickets
-                    </button>
-                    
+                <div class="mt-4 flex justify-between items-center">  
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded boton" id="Bogota" onclick="getTickets('Bogota')">Comprar Ticket </button>  
                 </div>
             </div>
-            <!-- Tour 4 -->
+          
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">New York,Estados Unidos</h2>
                 <p class="text-gray-600 mb-2">Fecha: 30 de Mayo, 2024</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button onclick="getTickets2(NewYork, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
-                        Tickets
-                    </button>
-                   
+                    <button class=" bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded boton" id="NewYork" onclick="getTickets('New York')">Comprar Ticket</button>
                 </div>
             </div>
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">Madrid,España</h2>
                 <p class="text-gray-600 mb-2">Fecha: 15 de octubre, 2024</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button onclick="getTickets(madrid, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
-                        Tickets
-                    </button>
-                   
+                    <button  class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded boton" id="Madrid" onclick="getTickets('Madrid')">Comprar Ticket </button>
                 </div>
             </div>
             <div class="bg-white p-4 shadow rounded">
                 <h2 class="text-xl font-semibold mb-2">La paz,Bolivia</h2>
                 <p class="text-gray-600 mb-2">Fecha: 3 de octubre, 2024</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <button onclick="getTickets2(laPaz, noTickets)" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded boton">
-                        Tickets
-                    </button>
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded boton" id="Lapaz" onclick="getTickets('La paz')">Comprar Ticket </button>
                    
                 </div>
             </div>
