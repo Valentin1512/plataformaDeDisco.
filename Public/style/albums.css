@@ -1,0 +1,69 @@
+body{
+    background-image: url(https://wallpapercave.com/wp/wp4566636.jpg);
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #e908d6;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.album_container{
+    position:fixed;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.album-item {
+    position: relative;
+    margin-left: 24px; /* Ajusta el margen según sea necesario */
+}
+
+.favorite-icon {
+    position:absolute;
+    color: grey; /* Color inicial del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    margin-right: 5px;
+}
+
+.favorite-icon.clicked {
+    color: rgb(251, 255, 0); /* Color del ícono al hacer clic */
+}

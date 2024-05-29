@@ -1,0 +1,22 @@
+{
+  "name": "plataformadedisco2024",
+  "version": "1.0.0",
+  "description": "servidor de mi pagina web sobre el artista lit killah",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/Valentin1512/plataformaDeDisco."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddAlbum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/addAlbum.css" />
+    <link rel="icon" href="Imagenes/favicon.ico">
+</head>
+<body>
+    <!-- Contenido de tu HTML -->
+    <div class="sidebar ">
+        <img class="rounded-full size-28" src="https://i.scdn.co/image/1281223dd3e5d4b035dc2ca8775a4cfa91e20508" alt="">
+        <h2 class="mt-2 text-black text-4xl">Valentin Viollaz</h2>
+        <ul>
+            <li  class="text-3xl mt-3.5"><a href="index.html">Menu</a></li>
+            <li  class="text-3xl mt-3.5"><a href="album.html">Albums</a></li>
+            <li  class="text-3xl mt-3.5"><a href="login.html">Cerrar sesion</a></li>
+        </ul>
+    </div>
+
+    <div class="text-center text-4xl text-fuchsia-500">Añadir ALBUM</div>
+    <form id="addAlbumForm">
+      <div class="text-center mt-5">
+        <label class="text-3xl text-white">
+          Titulo<br>
+          <input type="text" name="text" class="input text-center" placeholder="Titulo del album" id="titulo" />
+        </label>
+      </div>
+      <div class="text-center mt-5">
+        <label class="text-3xl text-white">
+          Año de lanzamiento<br>
+          <input type="number" min="1" max="2100" name="dato" class="input text-center" id="anio" />
+        </label>
+      </div>
+      <div class="text-center mt-5">
+        <label class="text-3xl text-white">
+          Descripcion<br>
+          <textarea class="input text-center" name="" id="descripcion" cols="40" rows="10"></textarea>
+        </label>
+      </div>
+      <div class="text-center mt-5">
+        <label class="text-3xl text-white">
+          Imagen del Album<br>
+          <input placeholder="Url del album" class="input text-center" type="url" id="imagen" />
+        </label>
+      </div>
+      <div class="text-center mt-5">
+        <button class="" id="enviar" type="submit">Añadir album</button>
+        <button class="" id="cancelar" type="click">Cancelar</button>
+      </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="JavaScript/addAlbum.js"></script>
+</body>
+</html>
+
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditAlbum</title>
+    <link rel="icon" href="Imagenes/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/editAlbum.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <img class="rounded-full size-28" src="https://i.scdn.co/image/1281223dd3e5d4b035dc2ca8775a4cfa91e20508" alt="">
+        <h2 class="mt-2 text-black text-4xl">Valentin Viollaz</h2>
+        <ul>
+            <li class="text-3xl mt-3.5"><a href="index.html">Menu</a></li>
+            <li class="text-3xl mt-3.5"><a href="album.html">Albums</a></li>
+            <li class="text-3xl mt-3.5"><a href="signUp.html">Cerrar sesion</a></li>
+        </ul>
+    </div>
+    <div class="text-center text-4xl text-fuchsia-500">
+        <div>EDITAR ALBUM</div>
+    </div>
+
+    <form id="formulario" onsubmit="return validarEditAlbum()" name="EditAlbum">
+      <input type="hidden" id="albumId" name="albumId" />
+      <div class="text-center mt-5">
+          <label class="text-3xl text-white">
+              Titulo <br>
+              <input type="text" class="input text-center" placeholder="Titulo del album" id="titulo" name="albumTitle" />
+          </label>
+      </div>
+      <div class="text-center mt-5">
+        <label class="text-3xl text-white">
+            Año de lanzamiento <br>
+            <input type="number" min="1" max="2100" class="input text-center"  id="anio" name="albumAnio" />
+        </label>
+    </div>
+      <div class="text-center mt-5">
+          <label class="text-3xl text-white size-40">
+              Descripcion <br>
+              <textarea class="input text-center" id="descripcion" cols="40" rows="10" name="albumDescription"></textarea>
+          </label>
+      </div>
+      <div class="text-center mt-5">
+          <label class="text-3xl text-white">
+              Url del album <br>
+              <input placeholder="Url del album" class="input text-center" type="url" id="albumUrl" name="albumUrl" />
+          </label>
+      </div>
+      
+      <button class="formulario__btn" id="editar" type="submit">Editar album</button>
+      <button class="formulario__btn" id="cancelar" type="button" onclick="cancelEdit()">Cancelar</button>
+  </form>
+  
+
+    <script src="JavaScript/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="JavaScript/editAlbum.js"></script>
+</body>
+</html>
+

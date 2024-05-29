@@ -6,7 +6,7 @@
     <title>Add songs</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style/addSongs.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="Imagenes/favicon.ico">
     
 </head>
 <body>
@@ -15,15 +15,11 @@
         <h2 class="mt-2 text-black text-4xl">Valentin Viollaz</h2>
         <ul>
             <li class="text-3xl mt-3.5"><a href="index.html">Menu</a></li>
-            <li class="text-3xl mt-3.5"><a href="#">Other Albums</a></li>
-            <li class="text-3xl mt-3.5"><a href="addAlbum.html">Add Album</a></li>
-            <li class="text-3xl mt-3.5"><a href="editAlbum.html">Edit Album</a></li>
-            <li class="text-3xl mt-3.5"><a href="addSongs.html">Add Songs</a></li>
-            <li class="text-3xl mt-3.5"><a href="Tours.html">Tours</a></li>
-            <li class="text-3xl mt-3.5"><a href="signUp.html">Log out</a></li>
+            <li  class="text-3xl mt-3.5"><a href="album.html">Albums</a></li></li>
+            <li class="text-3xl mt-3.5"><a href="signUp.html">cerrar sesion</a></li>
         </ul>
     </div>
-    <div class="text-center text-4xl text-fuchsia-500">ADD SONGS</div>
+    <div class="text-center text-4xl text-fuchsia-500">Añadir Cancion</div>
 
     <form name="AddSong" onsubmit="return validarAddSong()"  action="">
       <div class="text-center mt-5">
@@ -59,16 +55,19 @@
         <label class="text-3xl text-white"
           >Add a link <br>
           <input
-            placeholder="Url del album"
+            placeholder="Url de la cancion"
             class="input text-center"
             type="url"
           />
         </label>
       </div>
       <div class="text-center mt-5">
-        <button id="boton1" type="submit">Editar album</button>
+        <button id="boton1" type="submit">Guardar</button>
       </div>
-
+      
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="JavaScript/validacion.js"></script>
+     <script src="JavaScript/addSongs.js"></script>
 </body>
 </html>
