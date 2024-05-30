@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album View</title>
-    <link rel="icon" href="Imagenes/favicon.ico">
+    <title>Vista de un Álbum</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style/vistaDeUnAlbum.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <link rel="icon" href="Imagenes/favicon.ico">
 </head>
-
 <body>
     <div class="sidebar">
         <img class="rounded-full size-28" src="https://i.scdn.co/image/1281223dd3e5d4b035dc2ca8775a4cfa91e20508" alt="">
@@ -18,26 +15,21 @@
         <ul>
             <li class="text-3xl mt-3.5"><a href="index.html">Menu</a></li>
             <li class="text-3xl mt-3.5"><a href="album.html">Albums</a></li>
-            <li class="text-3xl mt-3.5"><a href="addSongs.html">Añadir Canciones</a></li>
-            <li class="text-3xl mt-3.5"><a href="signUp.html">Cerrar sesion</a></li>
+            <li class="text-3xl mt-3.5"><a href="signUp.html">Cerrar sesión</a></li>
         </ul>
     </div>
-
-    <h1>Detalles del Álbum</h1>
-    <div id="albumDetails">
-        <!-- Aquí se mostrarán los detalles del álbum -->
-        <h2 id="albumTitle"></h2>
-        <p id="albumDescription"></p>
-        <img id="albumCover" src="" alt="Cover Image">
-
-        <h2>Canciones</h2>
-        <ul id="songsList">
-            <!-- Aquí se mostrarán las canciones -->
+    <div id="albumDetails" class="container mx-auto mt-10">
+        <!-- El contenido del álbum se cargará aquí -->
+    </div>
+    <div id="songsList" class="container mx-auto mt-10 ">
+        <h3 class=" text-center text-4xl text-fuchsia-500">Canciones</h3>
+        <!-- El contenido de la canción se cargará aquí -->
+        <ul id="songListContainer" class="list-none ">
+            <!-- Las canciones se agregarán dinámicamente aquí -->
         </ul>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   
+    <script src="JavaScript/vistaDeUnAlbum.js"></script>
 </body>
-
 </html>

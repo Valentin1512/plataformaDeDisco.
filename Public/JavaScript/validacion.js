@@ -25,37 +25,6 @@ function validarEditAlbum() {
         ocultarMensajeError(formulario.elements["albumTitle"]);
     }
      return true
-
-    
-   
-        
-    
-   
-    
-}
-
-
-
-function validarAddSong() {
-    const formulario = document.forms["AddSong"];
-    const songTitle = formulario.elements["songTitle"].value.trim();
-    const artistName = formulario.elements["artistName"].value.trim();
-
-    if (songTitle === "") {
-        mostrarMensajeError(formulario.elements["songTitle"], "Por favor, ingresa el título de la canción.");
-        return false; 
-    } else {
-        ocultarMensajeError(formulario.elements["songTitle"]);
-    }
-
-    if (artistName === "") {
-        mostrarMensajeError(formulario.elements["artistName"], "Por favor, ingresa el nombre del artista.");
-        return false; 
-    } else {
-        ocultarMensajeError(formulario.elements["artistName"]);
-    }
-    swal("¡Éxito!", "¡La validación fue exitosa!", "success");
-    
     
 }
 

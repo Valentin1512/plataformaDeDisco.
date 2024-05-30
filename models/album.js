@@ -32,14 +32,13 @@ const album = new Schema({
     },
     portada:{
         type: String,
-        required: true
     },
-    
-    coverImage: String,
     cancion: [canciones] // Array de objetos de canciones
 });
 
 module.exports = mongoose.model("Albums", album);
+
+
 
 
 

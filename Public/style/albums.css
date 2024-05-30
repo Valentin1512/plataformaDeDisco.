@@ -1,9 +1,12 @@
 body{
-    background-image: url(https://wallpapercave.com/wp/wp4566636.jpg);
+    background-image: url(https://wallpaperaccess.com/full/6159813.jpg);
     background-size: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 

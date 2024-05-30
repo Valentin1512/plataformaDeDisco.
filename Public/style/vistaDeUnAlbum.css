@@ -1,9 +1,12 @@
 body{
-    background-image: url(https://wallpapercave.com/wp/wp4566636.jpg);
+    background-image: url(https://www.sonica.mx/u/fotografias/m/2021/8/21/f1280x720-9470_141145_5050.jpg);
     background-size: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 
@@ -44,4 +47,29 @@ body{
 .content {
     margin-left: 250px;
     padding: 20px;
+}
+
+#songsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+#songsList li {
+    display: inline-block;
+    width: 95%; /* Ajusta el ancho según tus necesidades */
+    margin: 10px; /* Espacio entre cada canción */
+    vertical-align: top; /* Alinea los elementos al principio */
+    background-color: white; /* Agregar fondo blanco */
+    padding: 20px; /* Espacio interno para separar el contenido del borde */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    background: url(https://th.bing.com/th/id/OIP.FWv8Ylkl-xg20iMze54GWQHaEv?w=282&h=181&c=7&r=0&o=5&pid=1.7);
+    background-size: 100%;
+}
+
+.delete-button {
+    margin-left: 10px; /* Espacio a la izquierda del botón de eliminar */
 }
