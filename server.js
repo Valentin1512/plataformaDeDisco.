@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 // Middleware para parsear JSON y datos URL-encoded
 app.use(express.json());
 app.use(cookieParser());
+app.use("/health", (req, res) => res.sendStatus(200));
 //app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect("mongodb+srv://valentin78:Indio1812@cluster0.mkbqpku.mongodb.net/PlataformaDisco2024?retryWrites=true&w=majority&appName=Cluster0")

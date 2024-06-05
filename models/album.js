@@ -33,7 +33,7 @@ const album = new Schema({
     portada:{
         type: String,
     },
-    cancion: [canciones] // Array de objetos de canciones
+    cancion: [canciones] 
 });
 
 module.exports = mongoose.model("Albums", album);

@@ -5,8 +5,11 @@ const hashPassword = require('../hashPassword');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const SECRET = 'pledu2024';
 
+const SECRET= ('./env')
+
+
+//ruta para crear un usuario
 router.post("/register", async function(req, res){
     try {
         const { nombre, apellido, email, contrasenia } = req.body;
@@ -26,6 +29,7 @@ router.post("/register", async function(req, res){
     }
 });
 
+//ruta para loguear un usuario
 router.post('/login', async (req, res) => {
     const { email, contrasenia } = req.body;
 
@@ -60,6 +64,33 @@ router.post('/login', async (req, res) => {
     } catch (err) {
         console.error('Error en el servidor:', err);
         res.status(500).json({ message: 'Error en el servidor' });
+    }
+});
+
+// Ruta de logout
+router.post('/logout', (req, res) => {
+    try {
+        res.clearCookie('token');
+        res.status(204).send();
+    } catch (err) {
+        console.error('Error en el servidor:', err);
+        res.status(500).json({ message: 'Error en el servidor' });
+    }
+});
+
+// Ruta /me
+router.get('/me', (req, res) => {
+    const token = req.cookies.token;
+    if (!token) {
+        return res.status(401).json({ message: 'No autorizado' });
+    }
+
+    try {
+        const decoded = jwt.verify(token, SECRET);
+        res.status(200).json(decoded);
+    } catch (err) {
+        console.error('Error al verificar el token:', err);
+        res.status(401).json({ message: 'No autorizado' });
     }
 });
 
