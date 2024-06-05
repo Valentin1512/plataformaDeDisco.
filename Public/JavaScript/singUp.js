@@ -19,7 +19,6 @@ boton.addEventListener("click", async function(e){
         if (response.status === 201) {
             console.log(response.data);
             swal("Éxito!", "Usuario creado correctamente!!", "success");
-            // Redirigir a la página de inicio de sesión después del registro exitoso
             window.location.href = 'login.html';
         } else {
             throw new Error('Error en la creación del usuario');

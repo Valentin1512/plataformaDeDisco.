@@ -1,23 +1,25 @@
 const express = require("express");
-let app = express();
+const app = express();
 const PORT = 3000;
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const path = require("path");
 const cors = require("cors");
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
-//app.use(bodyParser.urlencoded({extended: true}));
+
 // Middleware para parsear JSON y datos URL-encoded
 app.use(express.json());
 app.use(cookieParser());
 app.use("/health", (req, res) => res.sendStatus(200));
-//app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb+srv://valentin78:Indio1812@cluster0.mkbqpku.mongodb.net/PlataformaDisco2024?retryWrites=true&w=majority&appName=Cluster0")
-  .then(() => console.log("Conectado a MongoDB"))
-  .catch(err => console.log(err));
+// Conexión a MongoDB
+mongoose.connect(
+    `mongodb+srv://${process.env.DB_user}:${process.env.DB_password}@${process.env.DB_cluster}.mkbqpku.mongodb.net/${process.env.DB_name}?retryWrites=true&w=majority&appName=Cluster0`
+)
+.then(() => console.log("Conectado a MongoDB"))
+.catch(err => console.log(err));
 
-//Importar las rutas
+// Importar las rutas
 const usersRouter = require('./routes/users');
 const albumsRouter = require('./routes/albums');
 
@@ -26,13 +28,20 @@ app.use(express.static(path.join(__dirname, "Public")));
 app.use("/users", usersRouter);
 app.use("/albums", albumsRouter);
 
-
-//Inicio servidor en puerto 3000
+// Iniciar servidor en puerto 3000
 app.listen(PORT, function(){
     console.log("********************************");
     console.log("SERVIDOR INICIADO EN PUERTO 3000");
     console.log("********************************");
 });
+
+
+
+
+
+
+
+
 
 
 

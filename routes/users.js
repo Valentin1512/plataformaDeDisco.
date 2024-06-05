@@ -94,8 +94,7 @@ router.get('/me', (req, res) => {
     }
 });
 
-// * --- BUSCAR USER--- * //
-//localhost:5000/users/1234
+//BUSCAR USER
 router.get("/:id", async function(req, res){
     let userId = req.params.id;
     let searchUser = await users.findById(userId).select("-contrasenia");
@@ -103,7 +102,7 @@ router.get("/:id", async function(req, res){
     res.send(searchUser);
 });
 
-// * --- EDITAR USER --- * //
+// EDITAR USER 
 router.put("/:id", async function(req, res){
     let userId = req.params.id;
     let nuevosDatos = req.body;

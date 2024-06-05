@@ -8,7 +8,6 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
 
         if (response.status === 200) {
             Swal.fire("Éxito!", "Inicio de sesión correcto!!", "success");
-            // Redirigir a la página de inicio después del inicio de sesión exitoso
             window.location.href = 'index.html';
         }
     } catch (error) {

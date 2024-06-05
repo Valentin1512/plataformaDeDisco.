@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Album = require('../models/album'); // Importamos el modelo de Album
+const Album = require('../models/album'); 
 
 // Ruta para manejar la obtención de álbumes
 router.get('/album', async (req, res) => {

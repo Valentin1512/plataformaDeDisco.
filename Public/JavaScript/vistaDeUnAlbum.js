@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
         
         const songsListContainer = document.getElementById('songListContainer');
-        songsListContainer.innerHTML = ''; // Limpiar la lista de canciones antes de agregar las nuevas
+        songsListContainer.innerHTML = ''; 
 
         album.cancion.forEach((cancion, index) => {
             const li = document.createElement('li');
             li.classList.add('border', 'border-gray-200', 'p-4', 'mb-4', 'rounded', 'flex', 'items-center', 'justify-between');
-            li.dataset.songindex = index; // Añadir el índice como un atributo de datos en el <li>
+            li.dataset.songindex = index; 
             
             li.innerHTML = `
                 <div>
@@ -46,8 +46,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <source src="${cancion.url}" type="audio/mpeg">
                     </audio>
                     <button class="btn-delete-song text-red-500 hover:text-red-700" data-albumid="${album._id}" data-songindex="${index}">Eliminar</button>
-                </div>
-            `;
+                </div> 
+            `; //La etiqueta audio nose porque razon no me funciona :C, espero que no sea un impedimento para aprobar el curso. Pense en poner un etiqueta de hipervinculo que direccione
+               //al video de la cancion pero para mi quedaria feo
 
             songsListContainer.appendChild(li);
         });
@@ -57,20 +58,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         swal("Error", "Hubo un problema al obtener los detalles", "error");
     }
 
-    // Agrego un listener de eventos a los botones de eliminar canción
+   
     document.addEventListener('click', async (event) => {
         if (event.target.classList.contains('btn-delete-song')) {
             const albumId = event.target.getAttribute('data-albumid');
             const songIndex = event.target.getAttribute('data-songindex');
-            const songItem = event.target.closest('li'); // Seleccionar el <li> contenedor más cercano
+            const songItem = event.target.closest('li'); 
 
             try {
-                // Envío una solicitud DELETE al servidor
                 const response = await axios.delete(`/albums/album/${albumId}/deleteSong/${songIndex}`);
 
-                // Si la solicitud fue exitosa, elimina el <li> correspondiente
                 if (response.status === 200) {
-                    songItem.remove(); // Eliminar solo el <li> de la canción eliminada
+                    songItem.remove(); 
                     swal("Éxito", "La canción ha sido eliminada correctamente", "success");
                 } else {
                     swal("Error", "Hubo un problema al eliminar la canción", "error");
