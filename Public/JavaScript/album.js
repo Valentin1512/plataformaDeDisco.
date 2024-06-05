@@ -12,12 +12,12 @@ async function fetchAlbums() {
         // Limpiar la lista de álbumes existente
         albumsList.innerHTML = '';
   
-        albumsList.classList.add('flex', 'flex-wrap', 'justify-center', 'items-center');
+        albumsList.classList.add('flex','flex-wrap', 'justify-center', 'items-center');
   
         // Iterar sobre la lista de álbumes y agregarlos al DOM
         albums.forEach(album => {
             const albumDiv = document.createElement('div');
-            albumDiv.classList.add('album-item', 'm-5', 'p-5', 'bg-gray-200', 'rounded', 'shadow-lg', 'text-center', 'w-64');
+            albumDiv.classList.add('album-item','shadow-violet-950','m-5', 'p-5','border-4','border-fuchsia-500', 'bg-gray-200', 'rounded', 'shadow-lg', 'text-center', 'w-64');
   
             const albumImage = document.createElement('img');
             albumImage.style.width = '250px';

@@ -1,28 +1,19 @@
-const nombre = document.getElementById("name")
- const password = document.getElementById("password")
- const form = document.getElementById("form")
- const parrafo = document.getElementById("warnings")
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const contrasenia = document.getElementById("contrasenia").value;
 
- form.addEventListener("submit", e=>{
-     e.preventDefault()
-    let warnings = ""
-    let entrar = false
-     parrafo.innerHTML = ""
+    try {
+        const response = await axios.post("/users/login", { email, contrasenia });
 
-     if(nombre.value.length < 6){
-        warnings +=`El nombre no es valido <br> <br>`
-       entrar = true
-     }
-    if(password.value.length < 8){
-        warnings +=`La contraseña no es valida,  tiene que tener al menos 8 caracteres <br>`
-        entrar = true
-     }
-    if(entrar){
-         parrafo.innerHTML= warnings
-    }else {
-        if (nombre.value.length >6 && password.value.length >=8) {
-            window.location.href = "index.html";
-         } 
- }
- }
- )
+        if (response.status === 200) {
+            Swal.fire("Éxito!", "Inicio de sesión correcto!!", "success");
+            // Redirigir a la página de inicio después del inicio de sesión exitoso
+            window.location.href = 'index.html';
+        }
+    } catch (error) {
+        console.error('Error al iniciar sesión:', error);
+        Swal.fire("Error!", "Correo o contraseña incorrectos, intente nuevamente!!", "error");
+    }
+});
+

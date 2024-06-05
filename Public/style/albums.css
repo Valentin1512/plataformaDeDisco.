@@ -58,6 +58,7 @@ body{
 .album-item {
     position: relative;
     margin-left: 24px; /* Ajusta el margen según sea necesario */
+    
 }
 
 .favorite-icon {

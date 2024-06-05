@@ -62,7 +62,7 @@ body{
     width: 95%; /* Ajusta el ancho según tus necesidades */
     margin: 10px; /* Espacio entre cada canción */
     vertical-align: top; /* Alinea los elementos al principio */
-    background-color: white; /* Agregar fondo blanco */
+    background-color: rgb(255, 255, 255); /* Agregar fondo blanco */
     padding: 20px; /* Espacio interno para separar el contenido del borde */
     border-radius: 10px; /* Agregar bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
